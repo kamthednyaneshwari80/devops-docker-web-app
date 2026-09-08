@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dockerized Web Application</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f7faff;
+    color: #172033;
+}
+
+.hero {
+    min-height: 100vh;
+    padding: 70px 8%;
+    background: linear-gradient(135deg, #ffffff, #eef7ff, #f7f2ff);
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+}
+
+.badge {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 30px;
+    background: #e7f4ff;
+    color: #1677c8;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+h1 {
+    font-size: clamp(45px, 7vw, 78px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 22px;
+}
+
+.highlight {
+    color: #168bd3;
+}
+
+.subtitle {
+    max-width: 700px;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #667085;
+    margin-bottom: 45px;
+}
+
+.architecture-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #344054;
+    margin-bottom: 18px;
+}
+
+.architecture {
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr 40px 1fr;
+    align-items: center;
+    gap: 12px;
+}
+
+.card {
+    padding: 28px 20px;
+    text-align: center;
+    background: rgba(255,255,255,0.85);
+    border: 1px solid #dcecff;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(60,100,150,0.10);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(60,100,150,0.16);
+}
+
+.icon {
+    font-size: 42px;
+    margin-bottom: 13px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.card p {
+    color: #7b8798;
+    font-size: 13px;
+}
+
+.arrow {
+    font-size: 27px;
+    color: #168bd3;
+    text-align: center;
+    font-weight: bold;
+}
+
+.status {
+    margin-top: 35px;
+    padding: 17px;
+    text-align: center;
+    background: #ecfdf3;
+    color: #16804b;
+    border: 1px solid #b7ebce;
+    border-radius: 14px;
+    font-weight: 600;
+}
+
+.section {
+    padding: 80px 8%;
+    background: #ffffff;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 45px;
+}
+
+.tech-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.tech {
+    padding: 30px;
+    background: #f8fbff;
+    border: 1px solid #e3edf7;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.tech:hover {
+    transform: translateY(-5px);
+    border-color: #b8dcf5;
+}
+
+.tech-icon {
+    font-size: 35px;
+}
+
+.tech h3 {
+    margin: 15px 0 8px;
+}
+
+.tech p {
+    color: #667085;
+    line-height: 1.6;
+}
+
+footer {
+    padding: 28px;
+    text-align: center;
+    background: #f5f9fd;
+    color: #7b8798;
+    font-size: 14px;
+}
+
+@media (max-width: 800px) {
+    .architecture {
+        grid-template-columns: 1fr;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        letter-spacing: -1px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="container">
+
+    <div class="badge">🐳 DEVOPS PROJECT 02</div>
+
+    <h1>
+        Dockerized<br>
+        <span class="highlight">Web Application</span>
+    </h1>
+
+    <p class="subtitle">
+        Building a portable and consistent web application environment
+        using Docker containerization.
+    </p>
+
+    <div class="architecture-title">
+        DEPLOYMENT WORKFLOW
+    </div>
+
+    <div class="architecture">
+
+        <div class="card">
+            <div class="icon">💻</div>
+            <h3>Web Application</h3>
+            <p>HTML Application</p>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="card">
+            <div class="icon">📄</div>
+            <h3>Dockerfile</h3>
+            <p>Build Configuration</p>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="card">
+            <div class="icon">🐳</div>
+            <h3>Docker Container</h3>
+            <p>Isolated Environment</p>
+        </div>
+
+    </div>
+
+    <div class="status">
+        ✓ APPLICATION READY FOR CONTAINERIZED DEPLOYMENT
+    </div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Technology Stack</h2>
+
+<div class="tech-grid">
+
+    <div class="tech">
+        <div class="tech-icon">🐳</div>
+        <h3>Docker</h3>
+        <p>
+            Containerizes the application and creates a portable
+            deployment environment.
+        </p>
+    </div>
+
+    <div class="tech">
+        <div class="tech-icon">🐧</div>
+        <h3>Linux</h3>
+        <p>
+            Used as the environment for running Docker and
+            managing the application.
+        </p>
+    </div>
+
+    <div class="tech">
+        <div class="tech-icon">🔗</div>
+        <h3>Git & GitHub</h3>
+        <p>
+            Used for source code management and version control.
+        </p>
+    </div>
+
+</div>
+
+</section>
+
+<footer>
+    DevOps Project 02 • Docker • Linux • Git
+</footer>
+
+</body>
+</html>
